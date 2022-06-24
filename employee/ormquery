@@ -1,0 +1,63 @@
+create orm
+
+Employee.objects.create(eid="emp_100",employee_name="Anu",
+designation="developer",salary=25000,
+email="anu@gmail.com",experience=1)
+
+Employee.objects.create(eid="emp_101",employee_name="sam",
+designation="developer",salary=22000,
+email="sam@gmail.com")
+
+Employee.objects.create(eid="emp_102",employee_name="ram",
+designation="developer",salary=27000,
+email="ram@gmail.com",experience=2)
+
+Employee.objects.create(eid="emp_103",employee_name="amal",
+designation="Hr",salary=35000,
+email="amal@gmail.com",experience=4)
+
+Employee.objects.create(eid="emp_113",employee_name="mobin",
+designation="Hr",salary=15000,
+email="mobin@gmail.com",experience=0)
+
+Employee.objects.create(eid="emp_104",employee_name="arun",
+designation="It",salary=10000,
+email="arun@gmail.com",experience=0)
+
+Employee.objects.create(eid="emp_109",employee_name="merin",
+designation="It",salary=12000,
+email="merin@gmail.com",experience=1)
+
+retrieving objects
+qs=Employee.objects.all()
+
+filter query
+qs=Employee.objects.filter(designation="developer")
+print(qs)
+
+print employees salary > 24000
+qs=Employee.objects.filter(salary__gt=24000)
+__lt <
+__lte <=
+
+print employees who are not developers
+qs=Employee.objects.all().exclude(designation="developer")
+
+
+print employees details where designation=developer
+and salary>25000
+
+qs=Employee.objects.filter(designation="developer",
+salary__gt=24000)
+
+=>get()
+qs=Employee.objects.get(eid="emp_100")
+
+update
+qs=Employee.objects.get(eid="emp_101")
+qs.experience=2
+qs.save()
+
+delete
+qs=Employee.objects.get(eid="emp_100")
+qs.delete()

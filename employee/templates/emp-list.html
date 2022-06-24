@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <table class="table">
+                <tr>
+                    <th>Employee id</th>
+                    <th>Employee name</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </tr>
+                {%for emp in employees%}
+                <tr>
+                    <td>{{emp.eid}}</td>
+                    <td>{{emp.employee_name}}</td>
+                    <td>{{emp.email}}</td>
+                    <td>
+                        <a href="{%url 'emp-detail' emp.eid%}">View</a>
+                        <a href="{%url 'emp-edit' emp.eid%}">Edit</a>
+                        <a href="{%url 'emp-remove' emp.eid%}">Delete</a>
+                    </td>
+                </tr>
+                {%endfor%}
+            </table>
+        </div>
+        <div class="col-2"></div>
+    </div>
+</div>
+</body>
+
+</html>
