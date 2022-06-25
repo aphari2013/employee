@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="" method="post" enctype="multipart/form-data">
+    {%csrf_token%}
+    <div class="container">
+        <div class="row">
+
+        </div>
+    </div>
+    <input type="text" name="eid" id="id_eid" placeholder="enter employee id">
+    <input type="file" name="profile_pic" id="id_profile_pic">
+    <input type="text" name="employee_name" id="id_employee_name" placeholder="Employee name">
+    <input type="text" name="designation" id="id_designation" placeholder="Designation">
+    <input type="text" name="salary" id="id_salary" placeholder="Salary">
+    <input type="text" name="email" id="id_email" placeholder="Email">
+    <input type="text" name="experience" id="id_experience" placeholder="experience">
+    <button type="submit">submit</button>
+</form>
+</body>
+</html>

@@ -3,14 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 <body>
-<h1>Employee Detail</h1>
-{{employee.eid}}
-{{employee.employee_name}}
-{{employee.designation}}
-{{employee.salary}}
-{{employee.email}}
-{{employee.experience}}
+<div class="container">
+    <h1>Employee Detail</h1>
+    <div class="row col-4"></div>
+    <div class="row col-4">
+        <div class="card" style="width: 18rem;">
+            <img src="{{employee.profile_pic.url}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{employee.employee_name}}</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">{{employee.eid}}</li>
+
+                <li class="list-group-item">{{employee.designation}}</li>
+                <li class="list-group-item">{{employee.salary}}</li>
+                <li class="list-group-item">{{employee.email}}</li>
+                <li class="list-group-item">{{employee.experience}}</li>
+
+            </ul>
+            <div class="card-body">
+                <a href="#" class="card-link"></a>
+                <a href="#" class="card-link"></a>
+            </div>
+        </div>
+    </div>
+    <div class="row col-4"></div>
+</div>
+
+
 </body>
 </html>
